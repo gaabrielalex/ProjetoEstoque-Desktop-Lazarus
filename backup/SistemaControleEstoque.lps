@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="SistemaControleEstoque.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos X="24" Y="16"/>
+        <UsageCount Value="201"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="untFrmPrincipal"/>
+        <TopLine Value="118"/>
+        <CursorPos X="3" Y="136"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untdmconexao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="dmConexao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="untDmConexao"/>
+        <EditorIndex Value="9"/>
+        <CursorPos X="77" Y="19"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmcadastrocategoria.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCadastroCategoria"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="untFrmCadastroCategoria"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="42"/>
+        <CursorPos X="3" Y="15"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmcadastrocidade.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCadastroCidade"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="untFrmCadastroCidade"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="45"/>
+        <CursorPos X="81" Y="35"/>
+        <UsageCount Value="172"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmcadastroloja.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCadastroLoja"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="untFrmCadastroLoja"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="23"/>
+        <CursorPos X="75" Y="36"/>
+        <UsageCount Value="153"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmcadastrotransportadora.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCadastroTransportadora"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="untFrmCadastroTransportadora"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="54"/>
+        <CursorPos X="46" Y="101"/>
+        <UsageCount Value="129"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmcadastrofornecedor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCadastroFornecedor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="untFrmCadastroFornecedor"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="68"/>
+        <CursorPos Y="100"/>
+        <UsageCount Value="120"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmcadastroproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCadastroProduto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="untFrmCadastroProduto"/>
+        <EditorIndex Value="6"/>
+        <UsageCount Value="111"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmcadastroentrada.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCadastroEntrada"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="untFrmCadastroEntrada"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="159"/>
+        <CursorPos X="62" Y="223"/>
+        <UsageCount Value="85"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCadastroSaida"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="untFrmCadastroSaida"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="162"/>
+        <CursorPos X="24" Y="45"/>
+        <UsageCount Value="38"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\Programação Desktop\ArquivosProjetosEstoque\20230303\untfrmcrudcidade.pas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="untfrmCRUDCidade"/>
+        <EditorIndex Value="-1"/>
+        <ComponentState Value="1"/>
+        <UsageCount Value="1"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\src\component\ZComponentReg.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="42"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\dbctrls.pp"/>
+        <UnitName Value="DBCtrls"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="85" Y="14"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\components\anchordocking\anchordockpanel.pas"/>
+        <UnitName Value="AnchorDockPanel"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\stdctrls.pp"/>
+        <UnitName Value="StdCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="875"/>
+        <CursorPos X="14" Y="868"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="26">
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="23" Column="87" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="22" Column="63" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="21" Column="63" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="20" Column="63" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="22" Column="53" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastroentrada.pas"/>
+        <Caret Line="222" Column="84"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastroentrada.pas"/>
+        <Caret Line="223" Column="84" TopLine="196"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastroentrada.pas"/>
+        <Caret Line="222" Column="84" TopLine="195"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="28" Column="17"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="69" Column="33" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="68" Column="33" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="67" Column="33" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="68" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="82" Column="56" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="93" Column="100" TopLine="75"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="72" TopLine="65"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="78" Column="3" TopLine="61"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="83" Column="9" TopLine="72"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="89" Column="40" TopLine="75"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="107" Column="97" TopLine="97"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="108" Column="97" TopLine="98"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="109" Column="97" TopLine="99"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="171" Column="21" TopLine="160"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="91" Column="56" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="163" TopLine="153"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="45" Column="24" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmcadastrosaida.pas"/>
+        <Caret Line="45" Column="24" TopLine="31"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

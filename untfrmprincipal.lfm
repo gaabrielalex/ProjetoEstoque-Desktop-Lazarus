@@ -1,0 +1,60 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 497
+  Height = 585
+  Top = 218
+  Width = 882
+  Caption = 'Sistema de Controle de Estoque'
+  DesignTimePPI = 120
+  Menu = menuPrincipal
+  Position = poScreenCenter
+  LCLVersion = '2.2.6.0'
+  object menuPrincipal: TMainMenu
+    Left = 352
+    Top = 232
+    object menuCadastro: TMenuItem
+      Caption = 'Cadastro'
+      object mnItemCidade: TMenuItem
+        Caption = 'Cidade'
+        OnClick = mnItemCidadeClick
+      end
+      object mnItemCategoria: TMenuItem
+        Caption = 'Categoria'
+        OnClick = mnItemCategoriaClick
+      end
+      object mnItemLoja: TMenuItem
+        Caption = 'Loja'
+        OnClick = mnItemLojaClick
+      end
+      object mnItemFornecedor: TMenuItem
+        Caption = 'Fornecedor'
+        OnClick = mnItemFornecedorClick
+      end
+      object mnItemTransportadora: TMenuItem
+        Caption = 'Transportadora'
+        OnClick = mnItemTransportadoraClick
+      end
+      object mnItemProduto: TMenuItem
+        Caption = 'Produto'
+        OnClick = mnItemProdutoClick
+      end
+      object mnItemEntrada: TMenuItem
+        Caption = 'Entrada'
+        OnClick = mnItemEntradaClick
+      end
+      object mnItemSaida: TMenuItem
+        Caption = 'Saída'
+        OnClick = mnItemSaidaClick
+      end
+    end
+    object menuMovimentacao: TMenuItem
+      Caption = 'Movimentação'
+    end
+    object menuRelatorios: TMenuItem
+      Caption = 'Relatórios'
+    end
+    object menuSair: TMenuItem
+      Caption = 'Sair'
+      OnClick = menuSairClick
+    end
+  end
+end

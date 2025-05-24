@@ -1,0 +1,194 @@
+object frmCadastroCategoria: TfrmCadastroCategoria
+  Left = 537
+  Height = 738
+  Top = 179
+  Width = 1097
+  Caption = 'Cadastro de Categoria'
+  ClientHeight = 738
+  ClientWidth = 1097
+  DesignTimePPI = 120
+  OnShow = FormShow
+  Position = poOwnerFormCenter
+  LCLVersion = '2.2.6.0'
+  object GroupBox1: TGroupBox
+    Left = 16
+    Height = 368
+    Top = 24
+    Width = 600
+    Caption = 'Filtro'
+    ClientHeight = 343
+    ClientWidth = 596
+    TabOrder = 0
+    object lblCodigoFiltro: TLabel
+      Left = 16
+      Height = 20
+      Top = 8
+      Width = 52
+      Caption = 'Código:'
+      ParentColor = False
+    end
+    object lblDescricaoFiltro: TLabel
+      Left = 16
+      Height = 20
+      Top = 48
+      Width = 68
+      Caption = 'Descrição:'
+      ParentColor = False
+    end
+    object edtCodigoFiltro: TEdit
+      Left = 96
+      Height = 28
+      Top = 0
+      Width = 100
+      NumbersOnly = True
+      TabOrder = 0
+    end
+    object btnPesquisar: TButton
+      Left = 344
+      Height = 31
+      Top = 37
+      Width = 94
+      Caption = 'Pesquisar'
+      OnClick = btnPesquisarClick
+      TabOrder = 1
+    end
+    object DBGrid1: TDBGrid
+      Left = 16
+      Height = 232
+      Top = 96
+      Width = 568
+      Color = clWindow
+      Columns = <      
+        item
+          Title.Caption = 'Código'
+          Width = 65
+          FieldName = 'codcategoria'
+        end      
+        item
+          Title.Caption = 'Descrição'
+          FieldName = 'categoria'
+        end>
+      DataSource = dsCategoria
+      ReadOnly = True
+      TabOrder = 2
+    end
+  end
+  object edtDescricaoFiltro: TEdit
+    Left = 114
+    Height = 28
+    Top = 88
+    Width = 196
+    TabOrder = 1
+  end
+  object lblCodigo: TLabel
+    Left = 32
+    Height = 20
+    Top = 416
+    Width = 52
+    Caption = 'Código:'
+    ParentColor = False
+  end
+  object lblDescricao: TLabel
+    Left = 32
+    Height = 20
+    Top = 456
+    Width = 68
+    Caption = 'Descrição:'
+    ParentColor = False
+  end
+  object dbEdtCodigo: TDBEdit
+    Left = 112
+    Height = 28
+    Top = 408
+    Width = 100
+    DataField = 'codcategoria'
+    DataSource = dsCategoria
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object dbEdtDescricao: TDBEdit
+    Left = 112
+    Height = 28
+    Top = 448
+    Width = 328
+    DataField = 'categoria'
+    DataSource = dsCategoria
+    MaxLength = 50
+    TabOrder = 3
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 128
+    Height = 31
+    Top = 496
+    Width = 301
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 31
+    ClientWidth = 301
+    DataSource = dsCategoria
+    Options = []
+    TabOrder = 4
+  end
+  object qryCategoria: TZQuery
+    Connection = dmConexao.dbCon
+    UpdateObject = uqryCategoria
+    SQL.Strings = (
+      'SELECT *'
+      'FROM categoria'
+      'WHERE 1=1'
+    )
+    Params = <>
+    Left = 696
+    Top = 288
+  end
+  object uqryCategoria: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM categoria'
+      'WHERE'
+      '  ((categoria.codcategoria IS NULL AND :OLD_codcategoria IS NULL) OR (categoria.codcategoria = :OLD_codcategoria))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO categoria'
+      '  (codcategoria, categoria)'
+      'VALUES'
+      '  (:codcategoria, :categoria)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE categoria SET'
+      '  codcategoria = :codcategoria,'
+      '  categoria = :categoria'
+      'WHERE'
+      '  ((categoria.codcategoria IS NULL AND :OLD_codcategoria IS NULL) OR (categoria.codcategoria = :OLD_codcategoria))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    Left = 816
+    Top = 312
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'codcategoria'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'categoria'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_codcategoria'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsCategoria: TDataSource
+    DataSet = qryCategoria
+    Left = 776
+    Top = 192
+  end
+end

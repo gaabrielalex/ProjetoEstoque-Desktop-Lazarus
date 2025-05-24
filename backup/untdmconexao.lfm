@@ -1,0 +1,23 @@
+object dmConexao: TdmConexao
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 954
+  HorizontalOffset = 450
+  VerticalOffset = 121
+  Width = 1360
+  PPI = 120
+  object dbCon: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    Port = 0
+    Database = 'C:\Users\gabri\Documentos\VersõesProjetosEstoque\ProjetoEstoque\BDEstoque.db'
+    Protocol = 'sqlite-3'
+    Left = 136
+    Top = 221
+  end
+end

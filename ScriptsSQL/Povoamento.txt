@@ -1,0 +1,72 @@
+insert into categoria(categoria) values ('Fogões');
+insert into categoria(categoria) values ('Refrigeradores');
+insert into categoria(categoria) values ('Freezers');
+insert into categoria(categoria) values ('Lavadoras de Roupa');
+insert into categoria(categoria) values ('Lavadoras de Louça');
+insert into categoria(categoria) values ('Secadoras');
+insert into categoria(categoria) values ('Fornos de Microondas');
+insert into categoria(categoria) values ('Condicionadores de ar');
+
+
+insert into cidade(cidade, uf) values ('Cuiabá','MT');
+insert into cidade(cidade, uf) values ('Varzea Grande','MT');
+insert into cidade(cidade, uf) values ('Acorizal','MT');
+insert into cidade(cidade, uf) values ('Poconé','MT');
+insert into cidade(cidade, uf) values ('Chapada dos Guimarães','MT');
+insert into cidade(cidade, uf) values ('Campo Verde','MT');
+insert into cidade(cidade, uf) values ('Rondonopolis','MT');
+insert into cidade(cidade, uf) values ('Ribeirao Cascalheira','MT');
+insert into cidade(cidade, uf) values ('Goiania','GO');
+insert into cidade(cidade, uf) values ('Campo Grande','MS');
+insert into cidade(cidade, uf) values ('Sao Paulo','SP');
+insert into cidade(cidade, uf) values ('Rio de Janeira','RS');
+insert into cidade(cidade, uf) values ('Porto Alegre','RS');
+insert into cidade(cidade, uf) values ('Joao Pessoa','PB');
+
+
+insert into loja(cidade_codcidade,nome,endereco,num,bairro,	cep, telefone, insc, cnpj)
+values(1,'Loja 1', 'Rua das Flores', 10, 'Flores', '78000000','6536469545','123456789','12456789012');
+insert into loja(cidade_codcidade,nome,endereco,num,bairro,	cep, telefone, insc, cnpj)
+values(2,'Loja 2', 'Rua das Flores', 10, 'Flores', '78000000','6536469545','123456789','12456789012');
+insert into loja(cidade_codcidade,nome,endereco,num,bairro,	cep, telefone, insc, cnpj)
+values(3,'Loja 3', 'Rua das Flores', 10, 'Flores', '78000000','6536469545','123456789','12456789012');
+insert into loja(cidade_codcidade,nome,endereco,num,bairro,	cep, telefone, insc, cnpj)
+values(4,'Loja 4', 'Rua das Flores', 10, 'Flores', '78000000','6536469545','123456789','12456789012');
+
+
+insert into fornecedor(cidade_codcidade,fornecedor,endereco,num,bairro,	cep, contato,	telefone, insc, cnpj)
+values(1,'Brastemp - Multibrás', 'Rua das Flores', 10, 'Flores', '78000000','Joao', '6536469545','123456789','12456789012');
+insert into fornecedor(cidade_codcidade,fornecedor,endereco,num,bairro,	cep, contato,	telefone, insc, cnpj)
+values(1,'Consul - Multibrás', 'Rua das Flores', 10, 'Flores', '78000000','Joao', '6536469545','123456789','12456789012');
+insert into fornecedor(cidade_codcidade,fornecedor,endereco,num,bairro,	cep, contato,	telefone, insc, cnpj)
+values(2,'Semer - Multibrás', 'Rua das Flores', 10, 'Flores', '78000000','Joao', '6536469545','123456789','12456789012');
+insert into fornecedor(cidade_codcidade,fornecedor,endereco,num,bairro,	cep, contato,	telefone, insc, cnpj)
+values(2,'Prosdócimo - Refripar', 'Rua das Flores', 10, 'Flores', '78000000','Joao', '6536469545','123456789','12456789012');
+insert into fornecedor(cidade_codcidade,fornecedor,endereco,num,bairro,	cep, contato,	telefone, insc, cnpj)
+values(3,'Bosch - Continental', 'Rua das Flores', 10, 'Flores', '78000000','Joao', '6536469545','123456789','12456789012');
+insert into fornecedor(cidade_codcidade,fornecedor,endereco,num,bairro,	cep, contato,	telefone, insc, cnpj)
+values(3,'Continental - Continental', 'Rua das Flores', 10, 'Flores', '78000000','Joao', '6536469545','123456789','12456789012');
+insert into fornecedor(cidade_codcidade,fornecedor,endereco,num,bairro,	cep, contato,	telefone, insc, cnpj)
+values(4,'Metalfrio - Continental', 'Rua das Flores', 10, 'Flores', '78000000','Joao', '6536469545','123456789','12456789012');
+
+
+insert into Transportadora(cidade_codcidade,transportadora,endereco,num,bairro,	cep, telefone, insc, cnpj)
+values(1,'Transportadora 1', 'Rua das Flores', 10, 'Flores', '78000000','6536469545','123456789','12456789012');
+insert into Transportadora(cidade_codcidade,transportadora,endereco,num,bairro,	cep, telefone, insc, cnpj)
+values(2,'Transportadora 2', 'Rua das Flores', 10, 'Flores', '78000000','6536469545','123456789','12456789012');
+insert into Transportadora(cidade_codcidade,transportadora,endereco,num,bairro,	cep, telefone, insc, cnpj)
+values(3,'Transportadora 3', 'Rua das Flores', 10, 'Flores', '78000000','6536469545','123456789','12456789012');
+insert into Transportadora(cidade_codcidade,transportadora,endereco,num,bairro,	cep, telefone, insc, cnpj)
+values(4,'Transportadora 4', 'Rua das Flores', 10, 'Flores', '78000000','6536469545','123456789','12456789012');
+
+INSERT INTO produto (codproduto, categoria_codcategoria, fornecedor_codfornecedor, descricao, peso, controlado, qtdemin) VALUES
+  (1, 1, 1, 'Refrigerador Frost Free', 30.5, 1, 5),
+  (2, 3, 3, 'Freezer Horizontal', 50.2, 1, 3),
+  (3, 4, 4, 'Lavadora de Roupas Automática', 35.0, 1, 2),
+  (4, 5, 5, 'Lavadora de Louças Compacta', 25.8, 1, 4),
+  (5, 6, 6, 'Secadora de Roupas Elétrica', 40.0, 1, 3),
+  (6, 7, 7, 'Forno de Microondas com Grill', 15.6, 1, 1),
+  (7, 9, 9, 'Smartphone Android', 0.2, 1, 10),
+  (8, 10, 1, 'Conjunto de Talheres em Aço Inox', 0.8, 0, 20),
+  (9, 11, 9, 'TV LED 42 Polegadas', 15.0, 1, 3),
+  (10, 4, 2, 'Lavadora de Roupas Semi-Automática', 28.5, 1, 4);

@@ -1,0 +1,430 @@
+object frmCadastroProduto: TfrmCadastroProduto
+  Left = 619
+  Height = 725
+  Top = 118
+  Width = 1101
+  Caption = 'Cadastro de Produto'
+  ClientHeight = 0
+  ClientWidth = 0
+  DesignTimePPI = 120
+  OnShow = FormShow
+  Position = poOwnerFormCenter
+  LCLVersion = '2.2.6.0'
+  object GroupBox1: TGroupBox
+    Left = 16
+    Height = 392
+    Top = 24
+    Width = 800
+    Caption = 'Filtro'
+    ClientHeight = 367
+    ClientWidth = 796
+    TabOrder = 0
+    object lblDescricaoFiltro: TLabel
+      Left = 16
+      Height = 20
+      Top = 8
+      Width = 68
+      Caption = 'Descrição:'
+      ParentColor = False
+    end
+    object edtDescricaoFiltro: TEdit
+      Left = 104
+      Height = 28
+      Top = 0
+      Width = 280
+      TabOrder = 0
+    end
+    object btnPesquisar: TButton
+      Left = 472
+      Height = 31
+      Top = 48
+      Width = 94
+      Caption = 'Pesquisar'
+      OnClick = btnPesquisarClick
+      TabOrder = 1
+    end
+    object DBGrid1: TDBGrid
+      Left = 16
+      Height = 216
+      Top = 144
+      Width = 768
+      Color = clWindow
+      Columns = <      
+        item
+          Title.Caption = 'Código'
+          Width = 70
+          FieldName = 'codproduto'
+        end      
+        item
+          Title.Caption = 'Descrição'
+          Width = 280
+          FieldName = 'descricao'
+        end      
+        item
+          Title.Caption = 'Fornecedor'
+          Width = 210
+          FieldName = 'fornecedor'
+        end      
+        item
+          Title.Caption = 'Categoria'
+          Width = 180
+          FieldName = 'categoria'
+        end      
+        item
+          Title.Caption = 'Peso'
+          Width = 50
+          FieldName = 'peso'
+        end      
+        item
+          Title.Caption = 'Controlado'
+          Width = 90
+          FieldName = 'controlado'
+        end      
+        item
+          Title.Caption = 'Q. Mínina'
+          Width = 75
+          FieldName = 'qtdemin'
+        end>
+      DataSource = dsProduto
+      ReadOnly = True
+      TabOrder = 2
+    end
+    object lblCodigoFiltro: TLabel
+      Left = 416
+      Height = 20
+      Top = 8
+      Width = 52
+      Caption = 'Código:'
+      ParentColor = False
+    end
+    object edtCodigoFiltro: TEdit
+      Left = 480
+      Height = 28
+      Top = 0
+      Width = 80
+      NumbersOnly = True
+      TabOrder = 3
+    end
+    object lblCategoriaFiltro: TLabel
+      Left = 16
+      Height = 20
+      Top = 48
+      Width = 68
+      Caption = 'Categoria:'
+      ParentColor = False
+    end
+    object lblFornecedorFiltro: TLabel
+      Left = 16
+      Height = 20
+      Top = 88
+      Width = 78
+      Caption = 'Fornecedor:'
+      ParentColor = False
+    end
+    object edtFornecedorFiltro: TEdit
+      Left = 104
+      Height = 28
+      Top = 80
+      Width = 280
+      TabOrder = 4
+    end
+    object edtCategoriaFiltro: TEdit
+      Left = 104
+      Height = 28
+      Top = 40
+      Width = 280
+      TabOrder = 5
+    end
+  end
+  object lblCodigo: TLabel
+    Left = 436
+    Height = 20
+    Top = 448
+    Width = 52
+    Caption = 'Código:'
+    ParentColor = False
+  end
+  object dbEdtCodigo: TDBEdit
+    Left = 504
+    Height = 28
+    Top = 440
+    Width = 80
+    DataField = 'codproduto'
+    DataSource = dsProduto
+    Alignment = taRightJustify
+    MaxLength = 19
+    TabOrder = 1
+  end
+  object lblDescricao: TLabel
+    Left = 32
+    Height = 20
+    Top = 448
+    Width = 68
+    Caption = 'Descrição:'
+    ParentColor = False
+  end
+  object dbEdtDescricao: TDBEdit
+    Left = 120
+    Height = 28
+    Top = 440
+    Width = 288
+    DataField = 'descricao'
+    DataSource = dsProduto
+    MaxLength = 100
+    TabOrder = 2
+  end
+  object lblCodigoCategoria: TLabel
+    Left = 368
+    Height = 20
+    Top = 488
+    Width = 121
+    Caption = 'Código Categoria:'
+    ParentColor = False
+  end
+  object dbEdtCodigoCategoria: TDBEdit
+    Left = 504
+    Height = 28
+    Top = 480
+    Width = 80
+    DataField = 'categoria_codcategoria'
+    DataSource = dsProduto
+    ReadOnly = True
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 3
+  end
+  object lblCategoria: TLabel
+    Left = 32
+    Height = 20
+    Top = 488
+    Width = 68
+    Caption = 'Categoria:'
+    ParentColor = False
+  end
+  object dbEdtCategoria: TDBEdit
+    Left = 120
+    Height = 28
+    Top = 480
+    Width = 224
+    DataField = 'categoria'
+    DataSource = dsProduto
+    ReadOnly = True
+    MaxLength = 50
+    TabOrder = 4
+  end
+  object lblCodigoFornecedor: TLabel
+    Left = 357
+    Height = 20
+    Top = 528
+    Width = 131
+    Caption = 'Código Fornecedor:'
+    ParentColor = False
+  end
+  object dbEdtCodigoFornecedor: TDBEdit
+    Left = 504
+    Height = 28
+    Top = 520
+    Width = 80
+    DataField = 'fornecedor_codfornecedor'
+    DataSource = dsProduto
+    ReadOnly = True
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 5
+  end
+  object lblFornecedor: TLabel
+    Left = 32
+    Height = 20
+    Top = 528
+    Width = 78
+    Caption = 'Fornecedor:'
+    ParentColor = False
+  end
+  object dbEdtFornecedor: TDBEdit
+    Left = 120
+    Height = 28
+    Top = 520
+    Width = 224
+    DataField = 'fornecedor'
+    DataSource = dsProduto
+    ReadOnly = True
+    MaxLength = 50
+    TabOrder = 6
+  end
+  object btnPesquisarCategoria: TButton
+    Left = 600
+    Height = 36
+    Top = 476
+    Width = 152
+    Caption = 'Pesquisar Categoria'
+    OnClick = btnPesquisarCategoriaClick
+    TabOrder = 7
+  end
+  object btnPesquisarFornecedor: TButton
+    Left = 600
+    Height = 36
+    Top = 516
+    Width = 152
+    Caption = 'Pesquisar Fornecedor'
+    OnClick = btnPesquisarFornecedorClick
+    TabOrder = 8
+  end
+  object lblQtdeMin: TLabel
+    Left = 32
+    Height = 20
+    Top = 568
+    Width = 130
+    Caption = 'Quantidade Mínina:'
+    ParentColor = False
+  end
+  object dbEdtQtdeMin: TDBEdit
+    Left = 176
+    Height = 28
+    Top = 559
+    Width = 168
+    DataField = 'qtdemin'
+    DataSource = dsProduto
+    Alignment = taRightJustify
+    MaxLength = 19
+    TabOrder = 9
+  end
+  object lblPeso: TLabel
+    Left = 357
+    Height = 20
+    Top = 568
+    Width = 33
+    Caption = 'Peso:'
+    ParentColor = False
+  end
+  object DBCheckBox: TDBCheckBox
+    Left = 480
+    Height = 29
+    Top = 560
+    Width = 104
+    Alignment = taLeftJustify
+    Caption = 'Controlado'
+    DataField = 'controlado'
+    DataSource = dsProduto
+    TabOrder = 10
+    ValueChecked = 'True'
+    ValueUnchecked = 'False'
+  end
+  object dbEdtPeso: TDBEdit
+    Left = 400
+    Height = 28
+    Top = 559
+    Width = 64
+    DataField = 'peso'
+    DataSource = dsProduto
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 11
+  end
+  object DBNavigator2: TDBNavigator
+    Left = 104
+    Height = 47
+    Top = 632
+    Width = 432
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 47
+    ClientWidth = 432
+    DataSource = dsProduto
+    Options = []
+    TabOrder = 12
+  end
+  object qryProduto: TZQuery
+    Connection = dmConexao.dbCon
+    UpdateObject = uqryProduto
+    SQL.Strings = (
+      'select p.*, f.fornecedor, c.categoria'
+      'from produto p, fornecedor f, categoria c'
+      'where  p.fornecedor_codfornecedor = f.codfornecedor'
+      '       and p.categoria_codcategoria = c.codcategoria;'
+    )
+    Params = <>
+    Left = 856
+    Top = 595
+  end
+  object uqryProduto: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM produto'
+      'WHERE'
+      '  ((produto.codproduto IS NULL AND :OLD_codproduto IS NULL) OR (produto.codproduto = :OLD_codproduto))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO produto'
+      '  (codproduto, categoria_codcategoria, fornecedor_codfornecedor, descricao, '
+      '   peso, controlado, qtdemin)'
+      'VALUES'
+      '  (:codproduto, :categoria_codcategoria, :fornecedor_codfornecedor, :descricao, '
+      '   :peso, :controlado, :qtdemin)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE produto SET'
+      '  codproduto = :codproduto,'
+      '  categoria_codcategoria = :categoria_codcategoria,'
+      '  fornecedor_codfornecedor = :fornecedor_codfornecedor,'
+      '  descricao = :descricao,'
+      '  peso = :peso,'
+      '  controlado = :controlado,'
+      '  qtdemin = :qtdemin'
+      'WHERE'
+      '  ((produto.codproduto IS NULL AND :OLD_codproduto IS NULL) OR (produto.codproduto = :OLD_codproduto))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    Left = 990
+    Top = 595
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'codproduto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'categoria_codcategoria'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'fornecedor_codfornecedor'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'descricao'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'peso'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'controlado'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'qtdemin'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_codproduto'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsProduto: TDataSource
+    DataSet = qryProduto
+    Left = 928
+    Top = 528
+  end
+end

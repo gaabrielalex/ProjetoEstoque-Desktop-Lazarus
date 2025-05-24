@@ -1,0 +1,110 @@
+create table categoria(
+ 	codcategoria integer not null primary key autoincrement,
+	categoria varchar(50) not null
+);
+
+create table cidade(
+	codcidade integer not null primary key autoincrement,
+	cidade varchar(50) not null,
+	uf varchar (2) not null
+);
+
+create table loja(
+	codloja integer not null primary key autoincrement,
+	cidade_codcidade integer not null,
+	nome varchar(50) not null,
+	endereco varchar(50),
+	num integer,
+	bairro varchar(50),
+	cep varchar(9),
+	telefone varchar(14),
+	insc varchar(20),
+	cnpj varchar(18),
+	foreign key (cidade_codcidade) references cidade(codcidade)
+);
+
+create table fornecedor (
+	codfornecedor integer not null primary key autoincrement,
+	cidade_codcidade integer not null,
+	fornecedor varchar(50) not null,
+	endereco varchar(50),
+	num integer,
+	bairro varchar(50),	
+	cep varchar(9),
+	contato varchar(50),
+	telefone varchar(14),
+	insc varchar(20),
+	cnpj varchar(18),
+	foreign key(cidade_codcidade) references cidade(codcidade)
+);
+
+create table transportadora(
+	codtransportadora integer not null primary key autoincrement,
+	cidade_codcidade integer not null,
+	transportadora varchar(50) not null,
+	endereco varchar(50),
+	num integer,
+	bairro varchar(50),	
+	cep varchar(9),
+	contato varchar(50),
+	telefone varchar(14),
+	insc varchar(20),
+	cnpj varchar(18),
+	foreign key(cidade_codcidade) references cidade(codcidade)
+);
+
+create table produto(
+	codproduto integer not null primary key autoincrement,
+	categoria_codcategoria integer not null,
+	fornecedor_codfornecedor integer not null,
+	descricao varchar(100),
+	peso real not null,
+	controlado bool,
+	qtdemin integer not null,
+	foreign key(categoria_codcategoria) references categoria(codcategoria),
+	foreign key(fornecedor_codfornecedor) references fornecedor(codfornecedor)
+); 
+
+create table saida(
+	codsaida integer not null primary key autoincrement,
+	loja_codloja integer not null,
+	transportadora_codtransportadora integer not null,
+	total numeric(10,2),
+	frete numeric(10,2),
+	imposto numeric(10,2),
+	foreign key(transportadora_codtransportadora) references transportadora(codtransportadora),
+	foreign key(loja_codloja) references loja(codloja)
+);
+
+create table entrada(
+	codentrada integer not null primary key autoincrement,
+	transportadora_codtransportadora integer not null, 
+	dataped date not null,
+	dataentr date not null,
+	total numeric(10,2),
+	frete numeric(10,2),
+	numnf integer,
+	imposto numeric(10,2),
+	foreign key(transportadora_codtransportadora) references transportadora(codtransportadora)
+);
+
+create table itementrada(
+	coditementrada integer not null primary key autoincrement,
+	produto_codproduto integer not null,
+	entrada_codentrada integer not null,
+	lote varchar(50),
+	qtde integer not null,
+	valor numeric(10,2) not null,
+	foreign key(produto_codproduto) references produto(codproduto),
+	foreign key(entrada_codentrada) references entrada(codentrada)
+);
+create table itemsaida(
+	coditemsaida integer not null primary key autoincrement,
+	saida_codsaida integer not null,
+	produto_codproduto integer not null,
+	lote varchar(50),
+	qtde integer not null,
+	valor numeric(10,2) not null,
+	foreign key(produto_codproduto) references produto(codproduto),
+	foreign key(saida_codsaida) references saida(codsaida)
+);
